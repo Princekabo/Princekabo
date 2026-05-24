@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Douma's Crocodile Farm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Douma's Crocodile Farm Logo" width="50" height="50">
+                    <h2>Douma's Crocodile Farm</h2>
+                </a>
+                <ul>
+                    <li><a href="index.html">Home |</a></li>
+                    <li><a href="about.html">About Us |</a></li>
+                    <li><a href="activities.html">Activities |</a></li>
+                    <li><a href="contact.html">Contact Us |</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <div>
+                <h1>Visitor Insights & Reviews</h1>
+                <p>Forward your group observations or submit visit experience metrics below.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h3>Customer Feedback Form</h3>
+        </div>
+        
+        <form action="#" method="POST" id="userForm">
+            <div>
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Mpho Molefe" required>
+            </div>
+
+            <div>
+                <label for="emailAddress">Email Address *</label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="name@domain.com" required>
+            </div>
+
+            <div>
+                <label for="inquiryType">Purpose of Feedback *</label>
+                <select id="inquiryType" name="inquiryType" required>
+                    <option value="" disabled selected>Please select an option...</option>
+                    <option value="school">Educational Tour Review</option>
+                    <option value="tourist">Family Excursion Experience</option>
+                    <option value="feedback">General Sanctuary Suggestions</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="messageBody">Detailed Review Remarks *</label>
+                <textarea id="messageBody" name="messageBody" rows="4" placeholder="Type your core review notes here..." required></textarea>
+            </div>
+
+            <button type="submit">Submit Information Securely</button>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <h5>Douma's Crocodile Farm</h5>
+                <p>Dedicated to crocodile preservation, educational infrastructure development, and sustainable wildlife tourism channels across the region.</p>
+            </div>
+            <div>
+                <h6>Quick Navigation</h6>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2026 Douma's Crocodile Farm. Coursework Repository Build.</p>
+    </footer>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+            if (this.checkValidity()) {
+                e.preventDefault();
+                alert('Thank you! Your feedback has been validated and transmitted to the sanctuary records management office.');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>
